@@ -52,7 +52,7 @@ Challenge: Creating an intuitive, user-friendly design that aligns with the appâ
 Solution: Conduct user testing with real users, gather feedback, and iterate on the design to ensure ease of use. Tools like wireframes and prototypes can help visualize the design and gather early feedback.
 2. Debugging and Testing
 Challenge: Identifying and fixing bugs can be difficult, especially when they arise in edge cases or when multiple components of the app interact in unexpected ways.
-Solution: Implement unit tests, integration tests, and end-to-end tests to catch issues early. Utilizing debugging tools and logging can help track down elusive bugs. Also, employing test-driven development (TDD) can help ensure code reliability. (Note: I did not do most of these tests when working with the website)
+Solution: Implement unit tests, integration tests, and end-to-end tests to catch issues early. Utilizing debugging tools and logging can help track down elusive bugs. Also, employing test-driven development (TDD) can help ensure code reliability. (Note: I did not use most of these tests when working with the website)
 
 ## License
 
