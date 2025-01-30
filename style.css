@@ -1,45 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+/* Smooth Scroll for the page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Apply Cabin font globally */
+h1, h3, a {
+    font-family: 'Cabin', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color: #FFFF00;
+}
+
+/* Body Styles */
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    font-family: 'Cabin', sans-serif;
+    color: #e0e0e0; /* Light gray text for readability */
+    background: linear-gradient(90deg, #00bcd4, #0097a7, #006064);
+    background-size: 300% 300%;
+    animation: bodyGradientFade 12s infinite alternate ease-in-out;
+    transition: background-color 2s ease-in-out;
 }
 
-#tentacles {
-    width: 50px;
+/* Smooth Gradient Animation */
+@keyframes bodyGradientFade {
+    0% { background: linear-gradient(90deg, #00bcd4, #0097a7, #006064); }
+    50% { background: linear-gradient(90deg, #4caf50, #388e3c, #1b5e20); }
+    100% { background: linear-gradient(90deg, #00bcd4, #0097a7, #006064); }
 }
 
+/* Paragraph Styling */
+p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Soft gray text to match the body */
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 800px;
+    background-color: #00796b; /* Muted teal background to complement body */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+p:hover {
+    background-color: #e6f7ff; /* Light blue background on hover */
+    transform: scale(1.02); /* Slight scale effect */
+    color: #003c3c; /* Darker text color for better contrast on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+/* Navigation Bar */
+/* Navigation Bar */
+.nav-bar {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar li {
+    margin: 0 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333; /* Darker text color for better readability */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s, text-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
+}
+
+.nav-bar a:hover {
+    color: #ffffff; /* White text on hover for better contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Stronger text shadow */
+    background-color: #ff6f61; /* Add a background color on hover for more contrast */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-bar a:active {
+    background-color: #e55b50; /* Slightly darker background on active for a press effect */
+}
+
+
+/* Header */
 .header {
     display: flex;
-    background-color: lightblue;
-    padding: 1%;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    margin: 0 -10px;
+    color: #003366;
+    padding: 30px;
+    text-align: center;
+    animation: gradientAnimation 6s infinite alternate;
+    background: linear-gradient(45deg, #0A2239, #1E3A5F, #5F5980, #126782, #2C6E91, #1B998B);
+    background-size: 400% 400%;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
 
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header-text {
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* Stats Container */
 .stats-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue; /* Glowing effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.stats-container div {
+    margin: 10px;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #4db8b1; /* Soft teal to match overall theme */
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
-    width: 100%;
+    width: 250px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 #num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+    font-size: 3rem; /* Increased for visibility */
+}
+
+/* Flexbox container adjustments for small screens */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .game-card {
+        width: 100%;
+        padding: 15px;
+    }
 }
 
 #games-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 20px;
 }
 
 .game-img {
@@ -49,27 +185,222 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
-    padding: 1%;
+    background-color: #4db8b1; /* Soft light blue */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     margin: 1%;
     width: 300px;
     text-align: center;
-    border-radius: 7px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Glowing shadow */
 }
 
-#button-container {
-    text-align: center;
+/* Basic styling for games */
+.game-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .game-item h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .game-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }  
+
+/* Button Styling */
+.center-container {
+    justify-content: center;
+    align-items: center;
 }
 
+/* Button Styles */
 button {
-    font-family: 'Cabin';
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
     border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    z-index: 2;
+}
+  
+/* Focus Effect: Button */
+button:focus {
+    outline: none;
+    border: 2px solid #3399ff; /* Blue border on focus */
+    box-shadow: 0 0 15px lightblue; /* Light blue glow on focus */
+    z-index: 2;
+  }
+  
+  /* Active (Click) Effect: Button */
+  button:active {
+    background-color: #0066cc; /* Even darker blue when clicked */
+    transform: scale(0.98); /* Slight shrink effect on click */
+    z-index: 2;
+  }
+
+/* Class for Solid Background Color */
+.solid-color {
+    background-color: #87CEFA !important; /* Light Blue */
+    transition: background-color 2s ease-in-out; /* Smooth transition */
+}
+
+/* Styling for Return to Top button */
+.return-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4da6ff;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: floatButton 3s ease-in-out infinite;
+}
+
+.return-top-btn:hover {
+    background-color: #3399ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px lightblue;
+}
+
+@keyframes floatButton {
+    0% { transform: translateY(10px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+/* Show the button when scrolling */
+.return-top-btn.show {
+    opacity: 1;
+}
+
+/* Link Styling */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #004d99;
+    text-decoration: underline;
+}
+
+/* Search Container */
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#search-bar {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.7;  /* Makes the button less prominent */
+    transition: opacity 0.3s ease;
+  }
+  
+  .search-button:hover {
+    opacity: 1;  /* Full opacity on hover */
+  }
+  
+
+/* Additional Styling */
+h2 {
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+    margin: 20px;
+    color: #f4f4f4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional text shadow for better readability */
+}
+
+h2:hover, h3:hover {
+    color: #ffffff; /* Change color on hover to white for emphasis */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Slightly stronger text shadow on hover */
+}
+
+.game-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Footer */
+/* footer {
+    background-color: #003366;
+    color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+} */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer a {
+    color: #f4f4f4;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
