@@ -32,7 +32,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='Walkthrough.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough-Desktop.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough-Mobile-App.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
